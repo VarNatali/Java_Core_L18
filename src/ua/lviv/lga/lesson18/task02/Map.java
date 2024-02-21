@@ -4,6 +4,7 @@ import java.security.KeyStore;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.Map;
 
 
 public class Map<K, V> extends MyEntry<K, V> {
@@ -22,7 +23,7 @@ public class Map<K, V> extends MyEntry<K, V> {
 
     public void removeByKey(K key) {
 
-        Iterator<java.util.Map.Entry<K, V>> iterator = map.entrySet().iterator();
+        Iterator<Entry<K, V>> iterator = map.entrySet().iterator();
         while (iterator.hasNext()) {
             if (iterator.next().getKey().equals(key)) {
                 iterator.remove();
@@ -34,7 +35,7 @@ public class Map<K, V> extends MyEntry<K, V> {
 
     public void removeByValue(V val) {
 
-        Iterator<java.util.Map.Entry<K, V>> iterator = map.entrySet().iterator();
+        Iterator<Entry<K, V>> iterator = map.entrySet().iterator();
         while (iterator.hasNext()) {
             if (iterator.next().getValue().equals(val)) {
                 iterator.remove();
@@ -45,8 +46,8 @@ public class Map<K, V> extends MyEntry<K, V> {
     }
 
     public void keySetSchow() {
-        Set<java.util.Map.Entry<K, V>> myEnt = map.entrySet();
-        for (java.util.Map.Entry<K, V> me : myEnt) {
+        Set<Entry<K, V>> myEnt = map.entrySet();
+        for (Entry<K, V> me : myEnt) {
             System.out.println(me.getKey().toString());
 
 
@@ -56,8 +57,8 @@ public class Map<K, V> extends MyEntry<K, V> {
     }
 
     public void valueListSchow() {
-        Set<java.util.Map.Entry<K, V>> myEnt = map.entrySet();
-        for (java.util.Map.Entry<K, V> me : myEnt) {
+        Set<Entry<K, V>> myEnt = map.entrySet();
+        for (Entry<K, V> me : myEnt) {
             System.out.println(me.getValue().toString());
 
 
@@ -68,8 +69,8 @@ public class Map<K, V> extends MyEntry<K, V> {
 
     public void showMap() {
 
-        Set<java.util.Map.Entry<K, V>> myEnt = map.entrySet();
-        for (java.util.Map.Entry<K, V> me : myEnt) {
+        Set<Entry<K, V>> myEnt = map.entrySet();
+        for (Entry<K, V> me : myEnt) {
             System.out.println("key :" + me.getKey().toString() + " value :" + me.getValue().toString());
 
 
